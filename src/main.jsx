@@ -13,6 +13,8 @@ import ServicesDetails from './components/Pages/ServicesDetails';
 import ForgatePass from './components/Pages/ForgatePass';
 import { createRoot } from 'react-dom/client';
 import AuthProvider from './Provider/AuthProvider';
+import AddService from './components/Pages/AddService';
+import MyServices from './components/Pages/MyServices';
 
 
 
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
         {
           path: '/forget/:email',
           element: <ForgatePass></ForgatePass>
+        },
+        {
+          path: '/addservice',
+          element: <AddService></AddService>
+        },
+        {
+          path: '/my-service',
+          element: <MyServices></MyServices>
         }
       ]
     }

@@ -3,19 +3,18 @@ import { useParams } from 'react-router';
 
 const ServicesDetails = () => {
 
-    const [services, setServices] = useState([]);
+    const [service, setService] = useState([]);
     const {Id} = useParams();
 
     useEffect(()=>{
-        fetch('/services.json')
+        fetch(`http://localhost:3000/services/${Id}`)  
         .then(res=>res.json())
-        .then(data => setServices(data))
+        .then(data => setService(data))
         .catch(err=>console.log(err))
-    },[])
+    },[Id])
 
 
-    const findResult= services.find(service => service.serviceId == Id);
-    console.log(findResult);
+    
     
 
     return (
@@ -23,13 +22,12 @@ const ServicesDetails = () => {
         //price : 25 providerEmail : "info@pawcare.com" providerName : "PawCare Studio" rating : 4.9 serviceId : 1 serviceName : "Winter Coat Fitting for Dogs" slotsAvailable : 4
         
         <div className='flex flex-col items-center my-20'>
-            <img className='w-max h-[500px] rounded-3xl' src={findResult?.image} alt="" />
-            <p><span className='text-2xl'>ProviderName:</span> {findResult?.providerName}</p>
-            <p><span className='text-2xl'>Service Name:</span> {findResult?.serviceName}</p>
-            <p><span className='text-2xl'>Category:</span> {findResult?.category}</p>
-            <p><span className='text-2xl'>Email:</span> {findResult?.providerEmail}</p>
-            <p><span className='text-2xl'>Description:</span>{findResult?.description}</p>
-            <p><span className='text-2xl'>Price:</span> {findResult?.price}</p>
+            <img className='w-max h-[500px] rounded-3xl' src={service?.image} alt="" />
+            <p><span className='text-2xl'>Product Name:</span> {service?.productName}</p>
+            {/* <p><span className='text-2xl'>Category:</span> {findResult?.category}</p> */}
+            {/* <p><span className='text-2xl'>Email:</span> {service?.providerEmail}</p> */}
+            <p><span className='text-2xl'>Address:</span> {service?.address}</p>
+            <p><span className='text-2xl'>Price:</span> {service?.price}</p>
 
 
         </div>
