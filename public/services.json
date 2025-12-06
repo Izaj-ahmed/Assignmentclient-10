@@ -1,0 +1,110 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/CKjQSzFc/alec-favale-Ivzo69e18nk-unsplash.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Winter Grooming & Paw Treatment",
+    "providerName": "CozyPets Grooming",
+    "providerEmail": "hello@cozypets.com",
+    "price": 30,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Professional grooming with moisturizing paw balm and winter-safe shampoo.",
+    "image": "https://i.ibb.co.com/HLddwYy7/chewy-g-Wz-Tum-y-MCg-unsplash.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Warm Sweater Knitting for Cats",
+    "providerName": "Feline Fashion Hub",
+    "providerEmail": "contact@felinefashion.com",
+    "price": 20,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Hand-knit sweaters for cats designed with soft, breathable winter yarn.",
+    "image": "https://i.ibb.co.com/HDGB4z7P/ja-san-miguel-QQuv-Aw-Q-0-unsplash.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Nail Care & Trim",
+    "providerName": "Snowy Paws Clinic",
+    "providerEmail": "clinic@snowypaws.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Gentle nail trimming and paw moisturizing to protect pets from cold cracks.",
+    "image": "https://i.ibb.co.com/XrJZLL6g/paul-hanaoka-w2-Ds-S-ZAP4-U-unsplash.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Thermal Bed Setup for Small Pets",
+    "providerName": "WarmNest Pet Care",
+    "providerEmail": "support@warmnest.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Cozy thermal bed installation for hamsters, rabbits, and guinea pigs.",
+    "image": "https://i.ibb.co.com/7tNnbkTs/karsten-winegeart-qy0-BHykaq0-E-unsplash.jpg",
+    "category": "Shelter"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Winter Coat Washing & Maintenance",
+    "providerName": "FurFresh Laundry",
+    "providerEmail": "care@furfresh.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 7,
+    "description": "Deep cleaning and drying for pet coats while keeping the materials soft.",
+    "image": "https://i.ibb.co.com/CKjQSzFc/alec-favale-Ivzo69e18nk-unsplash.jpg",
+    "category": "Cleaning"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Snow Walk Assistance",
+    "providerName": "HappyPaws Walker",
+    "providerEmail": "walk@happypaws.com",
+    "price": 12,
+    "rating": 4.8,
+    "slotsAvailable": 10,
+    "description": "Guided winter walks ensuring pets stay warm and safe in the snow.",
+    "image": "https://i.ibb.co.com/HLddwYy7/chewy-g-Wz-Tum-y-MCg-unsplash.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Pet Winter Photography",
+    "providerName": "FrostyFrames Studio",
+    "providerEmail": "studio@frostyframes.com",
+    "price": 55,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Professional winter-themed photoshoot for pets with props and costumes.",
+    "image": "https://i.ibb.co.com/XrJZLL6g/paul-hanaoka-w2-Ds-S-ZAP4-U-unsplash.jpg",
+    "category": "Photography"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Anti-Freeze Fur Treatment",
+    "providerName": "PetShield Grooming",
+    "providerEmail": "shield@petshield.com",
+    "price": 22,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Special grooming treatment that prevents fur from freezing during winter walks.",
+    "image": "https://i.ibb.co.com/7tNnbkTs/karsten-winegeart-qy0-BHykaq0-E-unsplash.jpg",
+    "category": "Grooming"
+  }
+]
