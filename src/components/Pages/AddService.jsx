@@ -36,7 +36,7 @@ const AddService = () => {
 
         console.log(serviceData);
 
-        axios.post('http://localhost:3000/services', serviceData)
+        axios.post('https://assignmentserver-10.vercel.app/services', serviceData)
             .then(res => {
                 console.log(res);
                 navigation('/my-service');

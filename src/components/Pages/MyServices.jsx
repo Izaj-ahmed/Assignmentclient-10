@@ -10,7 +10,7 @@ const MyServices = () => {
     const {user} = useContext(AuthContext)
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/my-services?email=${user?.email}`)  
+        fetch(`https://assignmentserver-10.vercel.app/my-services?email=${user?.email}`)  
         .then(res=>res.json())
         .then(data => setMyService(data))
         .catch(err=>console.log(err))
@@ -18,7 +18,7 @@ const MyServices = () => {
 
 
     const handleDelete = (id) =>{
-        axios.delete(`http://localhost:3000/delete/${id}`)
+        axios.delete(`https://assignmentserver-10.vercel.app/delete/${id}`)
         .then(res=>{
             console.log(res.data);
             const remaining = myService.filter(service=> service._id != id);

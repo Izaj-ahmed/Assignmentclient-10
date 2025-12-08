@@ -12,7 +12,7 @@ const ServicesDetails = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:3000/services/${Id}`)
+        fetch(`https://assignmentserver-10.vercel.app/services/${Id}`)
             .then(res => res.json())
             .then(data => setService(data))
             .catch(err => console.log(err))
@@ -43,7 +43,7 @@ const ServicesDetails = () => {
             date: new Date()
         };
         
-        axios.post('http://localhost:3000/orders', orderData)
+        axios.post('https://assignmentserver-10.vercel.app/orders', orderData)
         .then(res=>{
             console.log(res);
             navigate('/my-orders')

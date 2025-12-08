@@ -14,7 +14,7 @@ const UpdateServices = () => {
     const navigation = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/services/${id}`)
+        axios.get(`https://assignmentserver-10.vercel.app/services/${id}`)
             .then(res => {
                 setService(res.data);
                 setCategory(res.data.category);
@@ -46,7 +46,7 @@ const UpdateServices = () => {
             createdAt: service?.createdAt
         };
 
-        axios.put(`http://localhost:3000/update/${id}`, serviceData)
+        axios.put(`https://assignmentserver-10.vercel.app/update/${id}`, serviceData)
         .then(res=>{
             console.log(res.data);
             navigation('/my-service');
