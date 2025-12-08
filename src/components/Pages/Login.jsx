@@ -27,7 +27,7 @@ const Login = () => {
         .then (result =>{
             setUser(result.user)
             toast("Log In Successfull!");
-            const redirectPath = location.state?.from || '/myprofile';
+            const redirectPath = location.state?.from || '/';
             navigate(redirectPath);
             
         })
@@ -42,7 +42,7 @@ const Login = () => {
         .then(result =>{
             setUser(result.user)
             toast("Log In Successfull!");
-            const redirectPath = location.state?.from || '/myprofile';
+            const redirectPath = location.state?.from || '/';
             navigate(redirectPath);
             
         })

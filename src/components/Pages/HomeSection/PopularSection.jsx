@@ -25,7 +25,10 @@ const PopularSection = () => {
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title">{service?.productName}</h2>
-                                <p>{service?.date}</p>
+                                <div className='flex justify-between'>
+                                    <p>{service?.category}</p>
+                                    <p className='text-end'>${service?.price}</p>
+                                </div>
                                 <div className="card-actions justify-end">
                                 <Link to={`/details/${service?._id}`}><button className="btn btn-primary">View details</button></Link>
                                 </div>

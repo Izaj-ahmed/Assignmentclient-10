@@ -8,13 +8,14 @@ import Services from './components/Pages/Services';
 import Login from './components/Pages/Login';
 import SignUp from './components/Pages/SignUp';
 import ProvideRouter from './Router Provider/ProvideRouter';
-import Profile from './components/Pages/Profile';
 import ServicesDetails from './components/Pages/ServicesDetails';
 import ForgatePass from './components/Pages/ForgatePass';
 import { createRoot } from 'react-dom/client';
 import AuthProvider from './Provider/AuthProvider';
 import AddService from './components/Pages/AddService';
 import MyServices from './components/Pages/MyServices';
+import UpdateServices from './components/Pages/UpdateServices';
+import MyOrders from './components/Pages/MyOrders';
 
 
 
@@ -40,10 +41,6 @@ const router = createBrowserRouter([
           Component: SignUp
         },
         {
-          path: '/myprofile',
-          element: <ProvideRouter><Profile></Profile></ProvideRouter>
-        },
-        {
           path: '/details/:Id',
           element: <ProvideRouter><ServicesDetails></ServicesDetails></ProvideRouter>
         },
@@ -53,11 +50,19 @@ const router = createBrowserRouter([
         },
         {
           path: '/addservice',
-          element: <AddService></AddService>
+          element: <ProvideRouter><AddService></AddService></ProvideRouter>
         },
         {
           path: '/my-service',
-          element: <MyServices></MyServices>
+          element: <ProvideRouter><MyServices></MyServices></ProvideRouter>
+        },
+        {
+          path: '/my-orders',
+          element: <ProvideRouter><MyOrders></MyOrders></ProvideRouter>
+        },
+        {
+          path: '/update-services/:id',
+          element: <ProvideRouter><UpdateServices></UpdateServices></ProvideRouter>
         }
       ]
     }

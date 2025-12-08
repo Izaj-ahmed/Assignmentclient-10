@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Link } from 'react-router';
+import axios from 'axios';
 
 const MyServices = () => {
 
@@ -15,19 +17,33 @@ const MyServices = () => {
     },[user?.email])
 
 
+    const handleDelete = (id) =>{
+        axios.delete(`http://localhost:3000/delete/${id}`)
+        .then(res=>{
+            console.log(res.data);
+            const remaining = myService.filter(service=> service._id != id);
+            setMyService(remaining);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+        
+    }
+
+
 
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mx-20">
                 <table className="table">
                     {/* head */}
                     <thead>
                         <tr>
                             
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,20 +61,19 @@ const MyServices = () => {
                                                         alt="Avatar Tailwind CSS Component" />
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div className="font-bold">{service?.productName}</div>
-                                                    <div className="text-sm opacity-50">{service?.address}</div>
-                                                </div>
+                                               
                                             </div>
                                         </td>
                                         <td>
-                                            Zemlak, Daniel and Leannon
-                                            <br />
-                                            <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                                            <div className="text-sm opacity-50">{service?.category}</div>
+                                            
                                         </td>
-                                        <td>Purple</td>
+                                        <td>{service?.price}</td>
                                         <th>
-                                        <button className="btn btn-ghost btn-xs">details</button>
+                                        <div className='flex gap-4'>
+                                            <button onClick={()=> handleDelete(service?._id)} className="btn btn-error btn-xs text-white">Delete</button>
+                                            <Link to={`/update-services/${service?._id}`}><button className="btn btn-success btn-xs text-white">Edit</button></Link>
+                                        </div>
                                         </th>
                                     </tr>
                                 )
